@@ -1,0 +1,15 @@
+# Ignore build artifacts
+target/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE/editor config files
+.idea/
+.vscode/
+
+# Ignore editor-specific files (e.g., vim swap files)
+*~
+*.swp
+
