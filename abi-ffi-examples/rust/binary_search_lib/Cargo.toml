@@ -4,3 +4,10 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+
+[lib]
+name = "binary_search_lib"
+crate-type = ["cdylib"]  # Dynamically linked library
+
+[profile.release]
+debug = true
