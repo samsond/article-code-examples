@@ -2,6 +2,8 @@ package org.example;
 
 import java.lang.foreign.*;
 import java.lang.invoke.MethodHandle;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 /**
  * Hello world!
@@ -10,8 +12,12 @@ import java.lang.invoke.MethodHandle;
 public class App {
     public static void main(String[] args) {
 
-        String libraryPath = "../../rust/binary_search_lib/target/release/libbinary_search_lib.dylib";
+        String libraryPath = System.getProperty("java.library.path");
 
+        if (libraryPath == null) {
+            System.err.println("Library path not set!");
+            return;
+        }
 
 
         try {

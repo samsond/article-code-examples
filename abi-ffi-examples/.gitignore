@@ -1,5 +1,6 @@
 # Ignore build artifacts
 target/
+build/
 
 # Ignore system files
 .DS_Store
@@ -12,4 +13,21 @@ Thumbs.db
 # Ignore editor-specific files (e.g., vim swap files)
 *~
 *.swp
+
+# Java build files
+*.class
+*.jar
+*.war
+*.ear
+*.db
+*.sqlite
+
+# Gradle specific files
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Gradle wrapper files
+gradle-wrapper.jar
+gradle-wrapper.properties
 
